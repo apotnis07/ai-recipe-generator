@@ -25,6 +25,11 @@ bedrockDataSource.grantPrincipal.addToPrincipalPolicy(
       "arn:aws:bedrock:*::foundation-model/anthropic.claude-sonnet-4-6",
       "arn:aws:bedrock:*:*:inference-profile/us.anthropic.claude-sonnet-4-6",
     ],
-    actions: ["bedrock:InvokeModel"],
+    actions: [
+      "bedrock:InvokeModel",
+      "aws-marketplace:ViewSubscriptions",
+      "aws-marketplace:Subscribe",
+      "aws-marketplace:Unsubscribe",
+    ],
   })
 );
